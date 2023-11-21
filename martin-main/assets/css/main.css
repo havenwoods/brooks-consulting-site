@@ -91,7 +91,7 @@ h5 {
 :root {
   --ff-Marcellus: 'Marcellus', serif;
   --ff-red-hat: 'Red Hat Display', sans-serif;
-  --color-brand: #F55837;
+  --color-brand: #183b08;
   --color-black: #0D0C0B;
 }
 
@@ -818,7 +818,7 @@ Hero Style end
 intro Style Start
 ==================*/
 .intro-style-one {
-  background: #F55837;
+  background: #183b08;
   color: #fff;
 }
 
