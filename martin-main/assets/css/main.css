@@ -733,7 +733,7 @@ Hero Style Start
 }
 
 .mouse-icon {
-  border: 2px solid var(--color-black);
+  border: 2px solid var(--color#2563e9);
   border-radius: 16px;
   height: 30px;
   width: 19px;
@@ -1632,9 +1632,14 @@ Testimonial Style Start End
 /* ==================
 Blog Style Start
 ==================*/
+
+body, .blog-card, .blog-card.v-dark, .blog-card .blog-meta li, .blog-card .blog-title, .blog-card .blog-disc {
+  color: #fff !important;
+}
+
 .blog-card {
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(13, 12, 11, 0.1);
+  border-bottom: 1px solid rgba(110, 150, 164, 0.1);
   padding-top: 24px;
 }
 
@@ -1705,7 +1710,7 @@ Blog Style Start
 .blog-card .blog-disc {
   font-size: 16px;
   line-height: 150%;
-  color: rgba(13, 12, 11, 0.8);
+  color: #2563e9 
   margin-top: 8px;
 }
 
@@ -1977,7 +1982,7 @@ Service Style Start
 }
 
 .single-service .service-name a {
-  color: rgba(13, 12, 11, 0.8);
+  color: rgba(11, 13, 13, 0.149);
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
