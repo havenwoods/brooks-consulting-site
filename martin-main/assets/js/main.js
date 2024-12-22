@@ -350,33 +350,26 @@
     },
   });
 
-  var portfoioSlider = new Swiper(".portfolio-slider", {
-    spaceBetween: 30,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+  var portfolioSlider = new Swiper(".portfolio-slider", {
+    slidesPerView: 1,
+    spaceBetween: 24,
     loop: true,
+    speed: 1000,
     pagination: {
-      el: ".portfolio-pagination",
-      clickable: true,
+        el: ".portfolio-pagination",
+        clickable: true,
     },
     breakpoints: {
-      320: {
-        slidesPerView: 1.2,
-      },
-      567: {
-        slidesPerView: 2.2,
-      },
-      776: {
-        slidesPerView: 2.8,
-      },
-      992: {
-        slidesPerView: 3.5,
-      },
-      2200: {
-        slidesPerView: 4.5,
-      },
+        576: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
     },
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    observer: true,
+    observeParents: true
   });
 })(jQuery);
