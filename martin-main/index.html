@@ -1436,7 +1436,7 @@
     <script src="./assets/js/main.js"></script>
 
     <script>
-        function sendEmail(event) {
+        async function sendEmail(event) {
             event.preventDefault(); // Prevent the default form submission
 
             // Get form values
@@ -1447,8 +1447,29 @@
             // Construct the mailto link
             const mailtoLink = `mailto:brookscreativeconsulting@gmail.com?subject=Contact%20Form%20Submission%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0D%0AFrom:%20${encodeURIComponent(email)}`;
 
-            // Open the mailto link
-            window.location.href = mailtoLink;
+            try {
+                // Open the mailto link
+                window.location.href = mailtoLink;
+
+                // Optionally, you can also send the data to your API if needed
+                const response = await fetch('/api/sendEmail', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, message }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                console.log('Success:', data);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again later.');
+            }
         }
     </script>
 
